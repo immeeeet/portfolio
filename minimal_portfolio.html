@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name - Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0a0a0a;
+        color: #e0e0e0;
+        font-family: "Courier New", monospace;
+        line-height: 1.6;
+        padding: 3rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        margin-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        color: #fff;
+      }
+
+      .meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        color: #999;
+        margin-bottom: 2rem;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        opacity: 0.7;
+      }
+
+      .bio {
+        font-size: 1rem;
+        color: #e0e0e0;
+        margin-bottom: 4rem;
+        max-width: 700px;
+      }
+
+      section {
+        margin-bottom: 4rem;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #999;
+      }
+
+      .more-link {
+        color: #999;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .more-link:hover {
+        color: #fff;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #1a1a1a;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateX(5px);
+      }
+
+      .project-card:hover .project-title {
+        color: #fff;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-title {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #e0e0e0;
+        transition: color 0.2s;
+      }
+
+      .project-date {
+        font-size: 0.85rem;
+        color: #666;
+      }
+
+      .project-desc {
+        font-size: 0.9rem;
+        color: #999;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+
+      .contact-link {
+        color: #999;
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        transition: color 0.2s;
+      }
+
+      .contact-link:hover {
+        color: #fff;
+      }
+
+      .arrow {
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+
+      footer {
+        margin-top: 5rem;
+        padding-top: 2rem;
+        border-top: 1px solid #1a1a1a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #666;
+        font-size: 0.85rem;
+      }
+
+      .made-with {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 2rem 1.5rem;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        footer {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Meet Parmar</h1>
+      <div class="meta">
+        <div class="meta-item">
+          <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+            />
+          </svg>
+          <span>Ahmedabad, India</span>
+        </div>
+        <div class="meta-item">
+          <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
+            />
+          </svg>
+          <span>CSE, 2024 - 2028</span>
+        </div>
+      </div>
+      <p class="bio">
+        i'm a 18 y/o cse student. i love coverting ideas into reality.
+      </p>
+    </header>
+
+    <section>
+      <div class="section-header">
+        <h2>projects</h2>
+        <a href="#" class="more-link">more »</a>
+      </div>
+      <div class="projects-grid">
+        <div>
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">ProjectName</span>
+              <span class="project-date">month, year</span>
+            </div>
+            <p class="project-desc">a short description of your project</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">AnotherProject</span>
+              <span class="project-date">month, year</span>
+            </div>
+            <p class="project-desc">what this project does</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">CoolApp</span>
+              <span class="project-date">month, year</span>
+            </div>
+            <p class="project-desc">another cool project description</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">WebTool</span>
+              <span class="project-date">month, year</span>
+            </div>
+            <p class="project-desc">a useful web tool for something</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>contact</h2>
+      <div class="contact">
+        <a href="meet2106p  @email.com" class="contact-link">
+          email <span class="arrow">↗</span>
+        </a>
+        <a
+          href="https://github.com/immeeeet"
+          class="contact-link"
+          target="_blank"
+        >
+          github <span class="arrow">↗</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/meet-parmar-b2aaa2226/"
+          class="contact-link"
+          target="_blank"
+        >
+          linkedin <span class="arrow">↗</span>
+        </a>
+        <a href="https://x.com/immeeeet" class="contact-link" target="_blank">
+          X <span class="arrow">↗</span>
+        </a>
+        <a
+          href="https://instagram.com/immeeeet"
+          class="contact-link"
+          target="_blank"
+        >
+          instagram <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+    <!-- e -->
+    <footer>
+      <span>immeeeet</span>
+      <div class="made-with">
+        <span>ambitious af</span>
+      </div>
+    </footer>
+  </body>
+</html>
