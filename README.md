@@ -1,2 +1,2 @@
 # portfolio
-an MVP portfolio
+an dummy portfolio
